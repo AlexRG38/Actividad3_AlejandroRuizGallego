@@ -1,0 +1,62 @@
+<app-cabecera titulo="DAM1"></app-cabecera>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://i.blogs.es/389033/programming/1366_2000.jpg">
+      </ion-avatar>
+      <ion-label>Programación</ion-label>
+      <ion-checkbox [(ngModel)]="checkP" (click)="presentToast('Programación Marcada')"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start"> 
+        <img src="https://blog.dinahosting.com/wp-content/uploads/2019/04/Bases-de-datos3.jpg">
+      </ion-avatar>
+      <ion-label>Bases de Datos</ion-label>
+      <ion-checkbox [(ngModel)]="checkD" (click)="presentToast('Base de datos Marcada')"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="data:image/png;base64,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">
+      </ion-avatar>
+      <ion-label>Entornos de desarrollo</ion-label>
+      <ion-checkbox [(ngModel)]="checkE" (click)="presentToast('Entornos de Desarrollo Marcada')"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9_4Z9wrK-HU4lqtahr8qnWEA-e7D3wJnTbg&usqp=CAU">
+      </ion-avatar>
+      <ion-label>Lenguaje de Marcas</ion-label>
+      <ion-checkbox [(ngModel)]="checkL" (click)="presentToast('Lenguaje de Marcas Marcada')"></ion-checkbox>
+    </ion-item>
+    
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZCbRci_1LU2HzJzOPbZXTAL5KOZ3v1wUw9g&usqp=CAU">
+      </ion-avatar>
+      <ion-label>Sistemas Informaticos</ion-label>
+      <ion-checkbox [(ngModel)]="checkS" (click)="presentToast('Sistemas Informaticos Marcada')"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://www.ieslamagdalena.com/wp-content/uploads/2019/09/fol-1-341x400.jpg">
+      </ion-avatar>
+      <ion-label>Fol</ion-label>
+      <ion-checkbox [(ngModel)]="checkF" (click)="presentToast('Fol Marcada')"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1200px-Flag_of_the_United_Kingdom.svg.png">
+      </ion-avatar>
+      <ion-label>Ingles</ion-label>
+      <ion-checkbox [(ngModel)]="checkI" (click)="presentToast('Ingles Marcada')"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
